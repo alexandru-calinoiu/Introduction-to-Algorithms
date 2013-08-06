@@ -1,7 +1,4 @@
-APP_ROOT = File.expand_path(File.join(File.dirname(__FILE__), "..", ".."))
-$: << File.join(APP_ROOT, "lib/heap")
-
-require "heap_helper"
+require "spec_helper"
 
 class Helper
   include HeapHelper
@@ -47,7 +44,7 @@ describe HeapHelper do
     it "should float to the right" do
       array = [2, 1, 3]
 
-      # @helper.max_heapify(array, 0)
+     # @helper.max_heapify(array, 0)
       @helper.max_heapify_interative(array, 0)
 
       array.should == [3, 1, 2]
